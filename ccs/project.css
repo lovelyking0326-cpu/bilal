@@ -1,0 +1,12 @@
+back{
+    background: pink;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiase;
+}
+header{
+    background:#161616;
+}
