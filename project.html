@@ -1,50 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-   #container{
-    display: block;
-    flex-wrap: wrap;
-    row-gap: 10px;
-   }
-   #container div {
-    border: 4px,solid #ccc;
-    padding: 10px;
-    width: 200px;
-   }
-  </style>
 <head>
-  <meta charset="UTF-8">
-  <title>Country searching</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Country Explorer</title>
   <link rel="stylesheet" href="./ccs/project.css">
 </head>
+
 <body>
-<header>
-  <nav>
-    <div class="LEFT">
-      <div class="branding">
-     
-      </div>
-      <div>
-        <a href="#">Home</a>
-          <a href="#">About</a>
-            <a href="#">page </a>
 
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <h2 class="logo-text">🌍 Country Explorer</h2>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </div>
-    </div>
-    <div class="right">
-      <button> contact</button>
-    </div>
-  </nav>
+
+      <div class="nav-right">
+        <input
+          type="text"
+          id="countryInput"
+          class="form-control"
+          placeholder="Search country..."
+        />
+        <button class="btn-search" onclick="fetchCountry()">Search</button>
+      </div>
+
+      <div class="menu-toggle" onclick="document.body.classList.toggle('open')">
+        ☰
+      </div>
+
+    </nav>
+  </div>
 </header>
-  <h1>Search Country</h1>
 
-  <input type="text" id="countryInput" placeholder="Enter country name">
-  <button onclick="fetchCountry()">Search</button>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Explore Countries of the World</h1>
+    <p>Search any country and get detailed information instantly.</p>
+  </div>
+</section>
 
-  <div id="output"></div>
+<!-- RESULTS -->
+<section class="results">
+  <div class="container">
+    <div id="loader" class="loader hidden"></div>
+    <div id="country"></div>
+  </div>
+</section>
 
-  <div style="padding: 10px;background-color: aqua;" id='container'></div>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Country Explorer | Built with ❤️</p>
+</footer>
 
+<script src="./js/project.js"></script>
 </body>
-<script src="/project.js"></script>
 </html>
